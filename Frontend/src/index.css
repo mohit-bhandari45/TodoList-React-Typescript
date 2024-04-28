@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.opbtn{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: gray;
+}
