@@ -14,4 +14,6 @@ RUN npm install
 
 COPY . . 
 
-RUN npm run dev
+EXPOSE 5173
+
+ENTRYPOINT ["npm","run","dev"]
