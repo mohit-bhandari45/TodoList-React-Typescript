@@ -46,6 +46,7 @@ const App = () => {
 
   const handleAdd = () => {
     settodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
+    console.log(todos)
     settodo("");
     saveToDB();
   }
@@ -92,14 +93,14 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div className="md:container mx-3 md:mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-[80vh] md:w-1/2">
+      <div className="md:container mx-3 md:mx-auto my-5 rounded-xl p-5 bg-blue-100 min-h-[80vh] md:w-1/2">
         <h1 className="font-bold text-center text-2xl">iTask-Manage your todos at one place</h1>
         <div className="addtodo my-5">
           <h1 className="text-xl font-bold my-2">Add a Todo</h1>
           <input onChange={handleChange} value={todo} type="text" className="w-[90%] rounded-full px-5 py-1" />
           <button onClick={handleAdd} disabled={todo.length <= 3} className="bg-violet-800 disabled:bg-violet-600 hover:bg-violet-950 text-white text-sm font-bold rounded-md p-3 py-1 mx-2">Save</button>
         </div>
-        <input className="my-4" onChange={toggleFinished} type="checkbox" checked={showFinished} />Show Finished
+        <input className="my-4" onChange={toggleFinished} type="checkbox" checked={showFinished} /><span className="pl-1">Show Finished</span>
         <h1 className="text-xl font-bold">Your Todos</h1>
 
         <div style={{ opacity: op }} className="todos">

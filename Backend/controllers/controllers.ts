@@ -13,6 +13,7 @@ const fetchTodos = async (req: Request, res: Response) => {
 
 const saveTodos = async (req: Request, res: Response) => {
     try {
+        console.log(req.body)
         await Todo.create(req.body);
         res.json({ CreationSuccess: true });
     } catch (error) {

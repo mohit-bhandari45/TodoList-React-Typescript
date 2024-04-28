@@ -27,6 +27,7 @@ const fetchTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 exports.fetchTodos = fetchTodos;
 const saveTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log(req.body);
         yield Todo_1.default.create(req.body);
         res.json({ CreationSuccess: true });
     }
