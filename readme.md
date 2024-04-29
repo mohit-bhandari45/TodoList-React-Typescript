@@ -57,24 +57,26 @@ node dist/server.js
 
 ## **Docker Setup**
 
-You can run docker containers either individually in two different terminals or by running a single command as well
+You have to first pull the custom images(provided further) from docker hub and then have to run the following commands
 
 ``` 
 Open terminal into you local system
 ```
 
-### **Individual front-end and backends containers**
+Pull the both front-end and back-end images from the docker hub by running following commands
+
+``` 
+docker pull mohitbhandari45/frontend-reactjs
+docker pull mohitbhandari45/backend-nodejs
+```
+
 
 Run front end and backend docker container individually in different terminal tabs by running following commands
 ```
-Front-end command:- docker run -it -p 5173:5173 <image name>
-Back-end command:- docker run -it -p 3000:3000 <image name>
+Front-end command:- docker run -it -p 5173:5173 mohitbhandari45/frontend-reactjs
+
+Back-end command:- docker run -it -p 3000:3000 mohitbhandari45/backend-nodejs
 ```
 
-### **Run front-end and back-end at once**
-Run both front-end and back-end at once in one tab by running this command:- 
-```
-docker compose up
-```
 
 ### Enjoy you application now!
