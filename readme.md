@@ -14,12 +14,8 @@
 
 ## **Local Setup**
 Fork the repository at-https://github.com/mohit-bhandari45/TodoList-React-Typescript to your account
+Then clone the forked repository into your local machine
 
-Then clone the forked repository, by writing the following line into the terminal
-
-``` 
-git clone https://github.com/<your-username>/TodoList-React-Typescript.git 
-```
 Then navigate to the cloned repository on your local system
 
 ``` 
